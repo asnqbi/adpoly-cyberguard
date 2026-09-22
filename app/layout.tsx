@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/data/site";
 import "./globals.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = { 
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   ),
@@ -10,13 +10,15 @@ export const metadata: Metadata = {
     default: "ADPoly CyberGuard | Cybersecurity & AI Team",
     template: "%s | ADPoly CyberGuard",
   },
-  description: site.description,
+  description: site.description, verification: {
+    google: "bNSKDy_iy8sB39kM_0humsSXuNlHoV1hiiE28aRX6sg",
+  },
   ...(process.env.NEXT_PUBLIC_SITE_URL
     ? { alternates: { canonical: "/" } }
     : {}),
   openGraph: {
     title: "ADPoly CyberGuard | Cybersecurity & AI Team",
-    description: site.description,
+    description: site.description, 
     siteName: site.name,
     type: "website",
     locale: "en_AE",
